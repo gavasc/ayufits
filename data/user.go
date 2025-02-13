@@ -9,6 +9,7 @@ type User struct {
 func (u User) Create() error {
 	query := "INSERT INTO users (user_id, name, username) VALUES (?, ?, ?);"
 	db := ConnectDb()
+	defer db.Close()
 	if _, err := db.Exec(query, u.UserId, u.Name, u.Username); err != nil {
 		return err
 	}
