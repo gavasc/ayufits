@@ -35,15 +35,15 @@ func main() {
 	// Handlers
 
 	b.Handle("/start", func(c tele.Context) error {
-		msg := commands.HandleStart(c)
-
-		return c.Send(msg)
+		return c.Send(commands.HandleStart(c))
 	})
 
 	b.Handle("/comi", func(c tele.Context) error {
-		resp := commands.HandleComi(c)
+		return c.Send(commands.HandleComi(c))
+	})
 
-		return c.Send(resp)
+	b.Handle("/resumo", func(c tele.Context) error {
+		return c.Send(commands.HandleResumo(c))
 	})
 
 	b.Start()
