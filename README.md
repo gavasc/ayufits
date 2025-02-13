@@ -6,4 +6,5 @@ is used by Brazilian users.
 
 ## Working right now ⚙️
 
-- Command "/comi": registers what and when you ate, and if it was a healthy meal.
+- Command "/comi":    registers what and when you ate, and if it was a healthy meal.
+- Command "/resumo":  returns a summary of meal types consumed in the past week.
